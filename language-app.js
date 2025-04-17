@@ -153,7 +153,7 @@ function app() {
             this.$refs.futuro_loro.value = this.selection.conjugation.futuro.loro;
         },
 
-        clear() {
+        clear_presente() {
             this.$refs.presente_io.value = "";
             this.$refs.presente_tu.value = "";
             this.$refs.presente_lei.value = "";
@@ -161,6 +161,24 @@ function app() {
             this.$refs.presente_voi.value = "";
             this.$refs.presente_loro.value = "";
 
+            this.presente_io = null;
+            this.presente_tu = null;
+            this.presente_lei = null;
+            this.presente_noi = null;
+            this.presente_voi = null;
+            this.presente_loro = null;
+        },
+
+        clear() {
+            this.clear_presente();
+            this.clear_imperfetto();
+            this.clear_passato();
+            this.clear_futuro();
+
+            this.$refs.presente_io.focus();
+        },
+
+        clear_imperfetto() {
             this.$refs.imperfetto_io.value = "";
             this.$refs.imperfetto_tu.value = "";
             this.$refs.imperfetto_lei.value = "";
@@ -168,6 +186,15 @@ function app() {
             this.$refs.imperfetto_voi.value = "";
             this.$refs.imperfetto_loro.value = "";
 
+            this.imperfetto_io = null;
+            this.imperfetto_tu = null;
+            this.imperfetto_lei = null;
+            this.imperfetto_noi = null;
+            this.imperfetto_voi = null;
+            this.imperfetto_loro = null;
+        },
+
+        clear_passato() {
             this.$refs.passato_io.value = "";
             this.$refs.passato_tu.value = "";
             this.$refs.passato_lei.value = "";
@@ -175,6 +202,15 @@ function app() {
             this.$refs.passato_voi.value = "";
             this.$refs.passato_loro.value = "";
 
+            this.passato_io = null;
+            this.passato_tu = null;
+            this.passato_lei = null;
+            this.passato_noi = null;
+            this.passato_voi = null;
+            this.passato_loro = null;
+        },
+
+        clear_futuro() {
             this.$refs.futuro_io.value = "";
             this.$refs.futuro_tu.value = "";
             this.$refs.futuro_lei.value = "";
@@ -182,35 +218,12 @@ function app() {
             this.$refs.futuro_voi.value = "";
             this.$refs.futuro_loro.value = "";
 
-            this.presente_io = null;
-            this.presente_tu = null;
-            this.presente_lei = null;
-            this.presente_noi = null;
-            this.presente_voi = null;
-            this.presente_loro = null;
-
-            this.imperfetto_io = null;
-            this.imperfetto_tu = null;
-            this.imperfetto_lei = null;
-            this.imperfetto_noi = null;
-            this.imperfetto_voi = null;
-            this.imperfetto_loro = null;
-
-            this.passato_io = null;
-            this.passato_tu = null;
-            this.passato_lei = null;
-            this.passato_noi = null;
-            this.passato_voi = null;
-            this.passato_loro = null;
-
             this.futuro_io = null;
             this.futuro_tu = null;
             this.futuro_lei = null;
             this.futuro_noi = null;
             this.futuro_voi = null;
             this.futuro_loro = null;
-
-            this.$refs.presente_io.focus();
         }
     }
 }

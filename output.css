@@ -206,6 +206,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .relative {
+    position: relative;
+  }
   .col-start-1 {
     grid-column-start: 1;
   }
@@ -245,11 +248,20 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
+  }
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
   }
   .block {
     display: block;
@@ -262,6 +274,9 @@
   }
   .hidden {
     display: none;
+  }
+  .inline {
+    display: inline;
   }
   .inline-block {
     display: inline-block;
@@ -535,6 +550,9 @@
   }
   .text-wrap {
     text-wrap: wrap;
+  }
+  .break-words {
+    overflow-wrap: break-word;
   }
   .text-gray-500 {
     color: var(--color-gray-500);
