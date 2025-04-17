@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8" x-data="app()" x-init="setup()">
-        <h1 class="text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-2xl lg:text-3xl xl:text-4xl">Ted's Top 80 Italian Verb Trainer</h1>
+        <h1 class="text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-2xl lg:text-3xl xl:text-4xl">Top 80 Italian Verb Trainer</h1>
 
         <div class="mx-4 my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
@@ -558,33 +558,33 @@
                 },
 
                 check() {
-                    this.presente_io = this.$refs.presente_io.value == this.selection.conjugation.presente.io;
-                    this.presente_tu = this.$refs.presente_tu.value == this.selection.conjugation.presente.tu;
-                    this.presente_lei = this.$refs.presente_lei.value == this.selection.conjugation.presente.lei;
-                    this.presente_noi = this.$refs.presente_noi.value == this.selection.conjugation.presente.noi;
-                    this.presente_voi = this.$refs.presente_voi.value == this.selection.conjugation.presente.voi;
-                    this.presente_loro = this.$refs.presente_loro.value == this.selection.conjugation.presente.loro;
+                    this.presente_io = this.$refs.presente_io.value.toLowerCase() == this.selection.conjugation.presente.io;
+                    this.presente_tu = this.$refs.presente_tu.value.toLowerCase() == this.selection.conjugation.presente.tu;
+                    this.presente_lei = this.$refs.presente_lei.value.toLowerCase() == this.selection.conjugation.presente.lei;
+                    this.presente_noi = this.$refs.presente_noi.value.toLowerCase() == this.selection.conjugation.presente.noi;
+                    this.presente_voi = this.$refs.presente_voi.value.toLowerCase() == this.selection.conjugation.presente.voi;
+                    this.presente_loro = this.$refs.presente_loro.value.toLowerCase() == this.selection.conjugation.presente.loro;
 
-                    this.imperfetto_io = this.$refs.imperfetto_io.value == this.selection.conjugation.imperfetto.io;
-                    this.imperfetto_tu = this.$refs.imperfetto_tu.value == this.selection.conjugation.imperfetto.tu;
-                    this.imperfetto_lei = this.$refs.imperfetto_lei.value == this.selection.conjugation.imperfetto.lei;
-                    this.imperfetto_noi = this.$refs.imperfetto_noi.value == this.selection.conjugation.imperfetto.noi;
-                    this.imperfetto_voi = this.$refs.imperfetto_voi.value == this.selection.conjugation.imperfetto.voi;
-                    this.imperfetto_loro = this.$refs.imperfetto_loro.value == this.selection.conjugation.imperfetto.loro;
+                    this.imperfetto_io = this.$refs.imperfetto_io.value.toLowerCase() == this.selection.conjugation.imperfetto.io;
+                    this.imperfetto_tu = this.$refs.imperfetto_tu.value.toLowerCase() == this.selection.conjugation.imperfetto.tu;
+                    this.imperfetto_lei = this.$refs.imperfetto_lei.value.toLowerCase() == this.selection.conjugation.imperfetto.lei;
+                    this.imperfetto_noi = this.$refs.imperfetto_noi.value.toLowerCase() == this.selection.conjugation.imperfetto.noi;
+                    this.imperfetto_voi = this.$refs.imperfetto_voi.value.toLowerCase() == this.selection.conjugation.imperfetto.voi;
+                    this.imperfetto_loro = this.$refs.imperfetto_loro.value.toLowerCase() == this.selection.conjugation.imperfetto.loro;
 
-                    this.passato_io = this.$refs.passato_io.value == this.selection.conjugation.passato.io;
-                    this.passato_tu = this.$refs.passato_tu.value == this.selection.conjugation.passato.tu;
-                    this.passato_lei = this.$refs.passato_lei.value == this.selection.conjugation.passato.lei;
-                    this.passato_noi = this.$refs.passato_noi.value == this.selection.conjugation.passato.noi;
-                    this.passato_voi = this.$refs.passato_voi.value == this.selection.conjugation.passato.voi;
-                    this.passato_loro = this.$refs.passato_loro.value == this.selection.conjugation.passato.loro;
+                    this.passato_io = this.$refs.passato_io.value.toLowerCase() == this.selection.conjugation.passato.io;
+                    this.passato_tu = this.$refs.passato_tu.value.toLowerCase() == this.selection.conjugation.passato.tu;
+                    this.passato_lei = this.$refs.passato_lei.value.toLowerCase() == this.selection.conjugation.passato.lei;
+                    this.passato_noi = this.$refs.passato_noi.value.toLowerCase() == this.selection.conjugation.passato.noi;
+                    this.passato_voi = this.$refs.passato_voi.value.toLowerCase() == this.selection.conjugation.passato.voi;
+                    this.passato_loro = this.$refs.passato_loro.value.toLowerCase() == this.selection.conjugation.passato.loro;
 
-                    this.futuro_io = this.$refs.futuro_io.value == this.selection.conjugation.futuro.io;
-                    this.futuro_tu = this.$refs.futuro_tu.value == this.selection.conjugation.futuro.tu;
-                    this.futuro_lei = this.$refs.futuro_lei.value == this.selection.conjugation.futuro.lei;
-                    this.futuro_noi = this.$refs.futuro_noi.value == this.selection.conjugation.futuro.noi;
-                    this.futuro_voi = this.$refs.futuro_voi.value == this.selection.conjugation.futuro.voi;
-                    this.futuro_loro = this.$refs.futuro_loro.value == this.selection.conjugation.futuro.loro;
+                    this.futuro_io = this.$refs.futuro_io.value.toLowerCase() == this.selection.conjugation.futuro.io;
+                    this.futuro_tu = this.$refs.futuro_tu.value.toLowerCase() == this.selection.conjugation.futuro.tu;
+                    this.futuro_lei = this.$refs.futuro_lei.value.toLowerCase() == this.selection.conjugation.futuro.lei;
+                    this.futuro_noi = this.$refs.futuro_noi.value.toLowerCase() == this.selection.conjugation.futuro.noi;
+                    this.futuro_voi = this.$refs.futuro_voi.value.toLowerCase() == this.selection.conjugation.futuro.voi;
+                    this.futuro_loro = this.$refs.futuro_loro.value.toLowerCase() == this.selection.conjugation.futuro.loro;
                 },
 
                 reveal() {
