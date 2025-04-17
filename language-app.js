@@ -36,33 +36,33 @@ function app() {
                 this.load();
             });
 
-            this.$refs.presente_io.addEventListener('blur', () => { this.presente_io = this.$refs.presente_io.value.toLowerCase() == this.selection.conjugation.presente.io; });
-            this.$refs.presente_tu.addEventListener('blur', () => { this.presente_tu = this.$refs.presente_tu.value.toLowerCase() == this.selection.conjugation.presente.tu; });
-            this.$refs.presente_lei.addEventListener('blur', () => { this.presente_lei = this.$refs.presente_lei.value.toLowerCase() == this.selection.conjugation.presente.lei; });
-            this.$refs.presente_noi.addEventListener('blur', () => { this.presente_noi = this.$refs.presente_noi.value.toLowerCase() == this.selection.conjugation.presente.noi; });
-            this.$refs.presente_voi.addEventListener('blur', () => { this.presente_voi = this.$refs.presente_voi.value.toLowerCase() == this.selection.conjugation.presente.voi; });
-            this.$refs.presente_loro.addEventListener('blur', () => { this.presente_loro = this.$refs.presente_loro.value.toLowerCase() == this.selection.conjugation.presente.loro; });
+            this.$refs.presente_io.addEventListener('change', () => { this.presente_io = this.$refs.presente_io.value.toLowerCase() == this.selection.conjugation.presente.io; });
+            this.$refs.presente_tu.addEventListener('change', () => { this.presente_tu = this.$refs.presente_tu.value.toLowerCase() == this.selection.conjugation.presente.tu; });
+            this.$refs.presente_lei.addEventListener('change', () => { this.presente_lei = this.$refs.presente_lei.value.toLowerCase() == this.selection.conjugation.presente.lei; });
+            this.$refs.presente_noi.addEventListener('change', () => { this.presente_noi = this.$refs.presente_noi.value.toLowerCase() == this.selection.conjugation.presente.noi; });
+            this.$refs.presente_voi.addEventListener('change', () => { this.presente_voi = this.$refs.presente_voi.value.toLowerCase() == this.selection.conjugation.presente.voi; });
+            this.$refs.presente_loro.addEventListener('change', () => { this.presente_loro = this.$refs.presente_loro.value.toLowerCase() == this.selection.conjugation.presente.loro; });
         
-            this.$refs.imperfetto_io.addEventListener('blur', () => { this.imperfetto_io = this.$refs.imperfetto_io.value.toLowerCase() == this.selection.conjugation.imperfetto.io; });
-            this.$refs.imperfetto_tu.addEventListener('blur', () => { this.imperfetto_tu = this.$refs.imperfetto_tu.value.toLowerCase() == this.selection.conjugation.imperfetto.tu; });
-            this.$refs.imperfetto_lei.addEventListener('blur', () => { this.imperfetto_lei = this.$refs.imperfetto_lei.value.toLowerCase() == this.selection.conjugation.imperfetto.lei; });
-            this.$refs.imperfetto_noi.addEventListener('blur', () => { this.imperfetto_noi = this.$refs.imperfetto_noi.value.toLowerCase() == this.selection.conjugation.imperfetto.noi; });
-            this.$refs.imperfetto_voi.addEventListener('blur', () => { this.imperfetto_voi = this.$refs.imperfetto_voi.value.toLowerCase() == this.selection.conjugation.imperfetto.voi; });
-            this.$refs.imperfetto_loro.addEventListener('blur', () => { this.imperfetto_loro = this.$refs.imperfetto_loro.value.toLowerCase() == this.selection.conjugation.imperfetto.loro; });
+            this.$refs.imperfetto_io.addEventListener('change', () => { this.imperfetto_io = this.$refs.imperfetto_io.value.toLowerCase() == this.selection.conjugation.imperfetto.io; });
+            this.$refs.imperfetto_tu.addEventListener('change', () => { this.imperfetto_tu = this.$refs.imperfetto_tu.value.toLowerCase() == this.selection.conjugation.imperfetto.tu; });
+            this.$refs.imperfetto_lei.addEventListener('change', () => { this.imperfetto_lei = this.$refs.imperfetto_lei.value.toLowerCase() == this.selection.conjugation.imperfetto.lei; });
+            this.$refs.imperfetto_noi.addEventListener('change', () => { this.imperfetto_noi = this.$refs.imperfetto_noi.value.toLowerCase() == this.selection.conjugation.imperfetto.noi; });
+            this.$refs.imperfetto_voi.addEventListener('change', () => { this.imperfetto_voi = this.$refs.imperfetto_voi.value.toLowerCase() == this.selection.conjugation.imperfetto.voi; });
+            this.$refs.imperfetto_loro.addEventListener('change', () => { this.imperfetto_loro = this.$refs.imperfetto_loro.value.toLowerCase() == this.selection.conjugation.imperfetto.loro; });
 
-            this.$refs.passato_io.addEventListener('blur', () => { this.passato_io = this.$refs.passato_io.value.toLowerCase() == this.selection.conjugation.passato.io; });
-            this.$refs.passato_tu.addEventListener('blur', () => { this.passato_tu = this.$refs.passato_tu.value.toLowerCase() == this.selection.conjugation.passato.tu; });
-            this.$refs.passato_lei.addEventListener('blur', () => { this.passato_lei = this.$refs.passato_lei.value.toLowerCase() == this.selection.conjugation.passato.lei; });
-            this.$refs.passato_noi.addEventListener('blur', () => { this.passato_noi = this.$refs.passato_noi.value.toLowerCase() == this.selection.conjugation.passato.noi; });
-            this.$refs.passato_voi.addEventListener('blur', () => { this.passato_voi = this.$refs.passato_voi.value.toLowerCase() == this.selection.conjugation.passato.voi; });
-            this.$refs.passato_loro.addEventListener('blur', () => { this.passato_loro = this.$refs.passato_loro.value.toLowerCase() == this.selection.conjugation.passato.loro; });
+            this.$refs.passato_io.addEventListener('change', () => { this.passato_io = this.$refs.passato_io.value.toLowerCase() == this.selection.conjugation.passato.io; });
+            this.$refs.passato_tu.addEventListener('change', () => { this.passato_tu = this.$refs.passato_tu.value.toLowerCase() == this.selection.conjugation.passato.tu; });
+            this.$refs.passato_lei.addEventListener('change', () => { this.passato_lei = this.$refs.passato_lei.value.toLowerCase() == this.selection.conjugation.passato.lei; });
+            this.$refs.passato_noi.addEventListener('change', () => { this.passato_noi = this.$refs.passato_noi.value.toLowerCase() == this.selection.conjugation.passato.noi; });
+            this.$refs.passato_voi.addEventListener('change', () => { this.passato_voi = this.$refs.passato_voi.value.toLowerCase() == this.selection.conjugation.passato.voi; });
+            this.$refs.passato_loro.addEventListener('change', () => { this.passato_loro = this.$refs.passato_loro.value.toLowerCase() == this.selection.conjugation.passato.loro; });
 
-            this.$refs.futuro_io.addEventListener('blur', () => { this.futuro_io = this.$refs.futuro_io.value.toLowerCase() == this.selection.conjugation.futuro.io; });
-            this.$refs.futuro_tu.addEventListener('blur', () => { this.futuro_tu = this.$refs.futuro_tu.value.toLowerCase() == this.selection.conjugation.futuro.tu; });
-            this.$refs.futuro_lei.addEventListener('blur', () => { this.futuro_lei = this.$refs.futuro_lei.value.toLowerCase() == this.selection.conjugation.futuro.lei; });
-            this.$refs.futuro_noi.addEventListener('blur', () => { this.futuro_noi = this.$refs.futuro_noi.value.toLowerCase() == this.selection.conjugation.futuro.noi; });
-            this.$refs.futuro_voi.addEventListener('blur', () => { this.futuro_voi = this.$refs.futuro_voi.value.toLowerCase() == this.selection.conjugation.futuro.voi; });
-            this.$refs.futuro_loro.addEventListener('blur', () => { this.futuro_loro = this.$refs.futuro_loro.value.toLowerCase() == this.selection.conjugation.futuro.loro; });
+            this.$refs.futuro_io.addEventListener('change', () => { this.futuro_io = this.$refs.futuro_io.value.toLowerCase() == this.selection.conjugation.futuro.io; });
+            this.$refs.futuro_tu.addEventListener('change', () => { this.futuro_tu = this.$refs.futuro_tu.value.toLowerCase() == this.selection.conjugation.futuro.tu; });
+            this.$refs.futuro_lei.addEventListener('change', () => { this.futuro_lei = this.$refs.futuro_lei.value.toLowerCase() == this.selection.conjugation.futuro.lei; });
+            this.$refs.futuro_noi.addEventListener('change', () => { this.futuro_noi = this.$refs.futuro_noi.value.toLowerCase() == this.selection.conjugation.futuro.noi; });
+            this.$refs.futuro_voi.addEventListener('change', () => { this.futuro_voi = this.$refs.futuro_voi.value.toLowerCase() == this.selection.conjugation.futuro.voi; });
+            this.$refs.futuro_loro.addEventListener('change', () => { this.futuro_loro = this.$refs.futuro_loro.value.toLowerCase() == this.selection.conjugation.futuro.loro; });
         },
 
         setup() {
