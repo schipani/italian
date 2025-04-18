@@ -125,22 +125,22 @@ function app() {
 
                 if (this.essential && selection.category == "essential") { 
                     this.language.push(...selection.verbs);
-                    this.loadSelect("Essential", selection.verbs);
+                    this.loadSelect("Essential", selection.verbs.sort((a, b) => a.verb.localeCompare(b.verb)));
                 }
 
                 if (this.frequent && selection.category == "frequent") {
                     this.language.push(...selection.verbs);
-                    this.loadSelect("Frequent", selection.verbs);
+                    this.loadSelect("Frequent", selection.verbs.sort((a, b) => a.verb.localeCompare(b.verb)));
                 }
 
                 if (this.daily && selection.category == "daily") {
                     this.language.push(...selection.verbs);
-                    this.loadSelect("Daily", selection.verbs);
+                    this.loadSelect("Daily", selection.verbs.sort((a, b) => a.verb.localeCompare(b.verb)));
                 }
 
                 if (this.reflexive && selection.category == "reflexive") {
                     this.language.push(...selection.verbs);
-                    this.loadSelect("Reflexive", selection.verbs);
+                    this.loadSelect("Reflexive", selection.verbs.sort((a, b) => a.verb.localeCompare(b.verb)));
                 }
             }
         },
