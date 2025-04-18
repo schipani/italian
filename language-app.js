@@ -99,6 +99,7 @@ function app() {
             window.history.pushState({}, '', url);
             this.checkUrl();
             this.reveal();
+            this.$refs.verbs.focus();
         },
 
         random() {
