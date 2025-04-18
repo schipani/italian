@@ -153,6 +153,13 @@ function app() {
             this.$refs.futuro_loro.value = this.selection.conjugation.futuro.loro;
         },
 
+        clear() {
+            this.clear_futuro();
+            this.clear_passato();
+            this.clear_imperfetto();
+            this.clear_presente();
+        },
+
         clear_presente() {
             this.$refs.presente_io.value = "";
             this.$refs.presente_tu.value = "";
@@ -160,6 +167,7 @@ function app() {
             this.$refs.presente_noi.value = "";
             this.$refs.presente_voi.value = "";
             this.$refs.presente_loro.value = "";
+            this.$refs.presente_io.focus();
 
             this.presente_io = null;
             this.presente_tu = null;
@@ -169,15 +177,6 @@ function app() {
             this.presente_loro = null;
         },
 
-        clear() {
-            this.clear_presente();
-            this.clear_imperfetto();
-            this.clear_passato();
-            this.clear_futuro();
-
-            this.$refs.presente_io.focus();
-        },
-
         clear_imperfetto() {
             this.$refs.imperfetto_io.value = "";
             this.$refs.imperfetto_tu.value = "";
@@ -185,6 +184,7 @@ function app() {
             this.$refs.imperfetto_noi.value = "";
             this.$refs.imperfetto_voi.value = "";
             this.$refs.imperfetto_loro.value = "";
+            this.$refs.imperfetto_io.focus();
 
             this.imperfetto_io = null;
             this.imperfetto_tu = null;
@@ -192,6 +192,7 @@ function app() {
             this.imperfetto_noi = null;
             this.imperfetto_voi = null;
             this.imperfetto_loro = null;
+
         },
 
         clear_passato() {
@@ -201,6 +202,7 @@ function app() {
             this.$refs.passato_noi.value = "";
             this.$refs.passato_voi.value = "";
             this.$refs.passato_loro.value = "";
+            this.$refs.passato_io.focus();
 
             this.passato_io = null;
             this.passato_tu = null;
@@ -217,6 +219,7 @@ function app() {
             this.$refs.futuro_noi.value = "";
             this.$refs.futuro_voi.value = "";
             this.$refs.futuro_loro.value = "";
+            this.$refs.futuro_io.focus();
 
             this.futuro_io = null;
             this.futuro_tu = null;
@@ -224,6 +227,11 @@ function app() {
             this.futuro_noi = null;
             this.futuro_voi = null;
             this.futuro_loro = null;
+        },
+
+        clear_vlog() {
+            this.$refs.vlog.value = "";
+            this.$refs.vlog.focus();
         }
     }
 }
