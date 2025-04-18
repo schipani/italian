@@ -98,6 +98,7 @@ function app() {
             url.searchParams.set('verb', selected);
             window.history.pushState({}, '', url);
             this.checkUrl();
+            this.reveal();
         },
 
         random() {
