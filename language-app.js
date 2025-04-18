@@ -63,10 +63,33 @@ function app() {
             this.$refs.futuro_noi.addEventListener('change', () => { this.futuro_noi = this.$refs.futuro_noi.value.toLowerCase() == this.selection.conjugation.futuro.noi; });
             this.$refs.futuro_voi.addEventListener('change', () => { this.futuro_voi = this.$refs.futuro_voi.value.toLowerCase() == this.selection.conjugation.futuro.voi; });
             this.$refs.futuro_loro.addEventListener('change', () => { this.futuro_loro = this.$refs.futuro_loro.value.toLowerCase() == this.selection.conjugation.futuro.loro; });
+        
+        
+            window.addEventListener('popstate', () => this.checkUrl());
         },
 
         setup() {
             this.load();
+            this.checkUrl();
+        },
+
+        checkUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const verb = params.get('verb');
+            if (verb) {
+                this.specific(verb.toLowerCase());
+            }
+        },
+
+        specific(verb) {
+            for (var i = 0; i < this.language.length; i++) {
+                const language = this.language[i];
+                if (language.verb.toLowerCase() == verb){
+                    this.selection = language;
+                    this.$refs.verb.textContent = this.selection.verb;
+                    this.clear();
+                }
+            }
         },
 
         random() {
