@@ -113,22 +113,51 @@ function app() {
 
         load() {
             this.language = [];
-            this.language.push(...language[0].verbs);
-            for (var i = 1; i < language.length; i++) {
-                const selection = language[i];
-                if (this.essential && selection.category == "essential") this.language.push(...selection.verbs);
-                if (this.frequent && selection.category == "frequent") this.language.push(...selection.verbs);
-                if (this.daily && selection.category == "daily") this.language.push(...selection.verbs);
-                if (this.reflexive && selection.category == "reflexive") this.language.push(...selection.verbs);
-            }
-            
+
             this.$refs.verbs.innerHTML = "";
-            this.language.forEach(lang => {
+            for (var i = 0; i < language.length; i++) {
+                const selection = language[i];
+
+                if (this.auxiliary && selection.category == "auxiliary") { 
+                    this.language.push(...selection.verbs);
+                    this.loadSelect("Auxiliary", selection.verbs);
+                }
+
+                if (this.essential && selection.category == "essential") { 
+                    this.language.push(...selection.verbs);
+                    this.loadSelect("Essential", selection.verbs);
+                }
+
+                if (this.frequent && selection.category == "frequent") {
+                    this.language.push(...selection.verbs);
+                    this.loadSelect("Frequent", selection.verbs);
+                }
+
+                if (this.daily && selection.category == "daily") {
+                    this.language.push(...selection.verbs);
+                    this.loadSelect("Daily", selection.verbs);
+                }
+
+                if (this.reflexive && selection.category == "reflexive") {
+                    this.language.push(...selection.verbs);
+                    this.loadSelect("Reflexive", selection.verbs);
+                }
+            }
+        },
+
+        loadSelect(grp, arr) {
+            let optgroup = document.createElement('optgroup');
+            optgroup.label = grp;
+            optgroup.classList.add('text-gray-800');
+
+            arr.forEach(lang => {
                 const option = document.createElement('option');
                 option.value = lang.verb.toLowerCase();
                 option.textContent = lang.verb;
-                this.$refs.verbs.appendChild(option);
+                optgroup.appendChild(option);
             });
+
+            this.$refs.verbs.appendChild(optgroup);
         },
 
         check() {

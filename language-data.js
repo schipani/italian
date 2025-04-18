@@ -1,6 +1,6 @@
 let language = [
     {
-        "category": "basic",
+        "category": "auxiliary",
         "verbs": [
             {"verb":"Essere","conjugation":{"presente":{"io":"sono","tu":"sei","lei":"è","noi":"siamo","voi":"siete","loro":"sono"},"imperfetto":{"io":"ero","tu":"eri","lei":"era","noi":"eravamo","voi":"eravate","loro":"erano"},"passato":{"io":"sono stato/a","tu":"sei stato/a","lei":"è stato/a","noi":"siamo stati/e","voi":"siete stati/e","loro":"sono stati/e"},"futuro":{"io":"sarò","tu":"sarai","lei":"sarà","noi":"saremo","voi":"sarete","loro":"saranno"}}},
             {"verb":"Avere","conjugation":{"presente":{"io":"ho","tu":"hai","lei":"ha","noi":"abbiamo","voi":"avete","loro":"hanno"},"imperfetto":{"io":"avevo","tu":"avevi","lei":"aveva","noi":"avevamo","voi":"avevate","loro":"avevano"},"passato":{"io":"ho avuto","tu":"hai avuto","lei":"ha avuto","noi":"abbiamo avuto","voi":"avete avuto","loro":"hanno avuto"},"futuro":{"io":"avrò","tu":"avrai","lei":"avrà","noi":"avremo","voi":"avrete","loro":"avranno"}}}
