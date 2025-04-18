@@ -92,6 +92,14 @@ function app() {
             }
         },
 
+        changeVerb() {
+            const selected = this.$refs.verbs.value;
+            const url = new URL(window.location.href);
+            url.searchParams.set('verb', selected);
+            window.history.pushState({}, '', url);
+            this.checkUrl();
+        },
+
         random() {
             const selection = this.language[Math.floor(Math.random() * this.language.length)];
             this.selection = selection;
@@ -102,7 +110,6 @@ function app() {
         },
 
         load(randomize = true) {
-            
             this.language = [];
             this.language.push(...language[0].verbs);
             for (var i = 1; i < language.length; i++) {
@@ -113,6 +120,15 @@ function app() {
                 if (this.reflexive && selection.category == "reflexive") this.language.push(...selection.verbs);
             }
             
+            this.$refs.verbs.innerHTML = "";
+            this.language.forEach(lang => {
+                const option = document.createElement('option');
+                option.value = lang.verb.toLowerCase();
+                option.textContent = lang.verb;
+                this.$refs.verbs.appendChild(option);
+            });
+
+
             if (randomize) this.random();
         },
 

@@ -183,19 +183,50 @@
                 <table class="min-w-full divide-y divide-x divide-gray-300">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"> </th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Io</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Tu</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Lui/Lei</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Noi</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Voi</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Loro</th>
-                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"> </th>
+                            <th scope="col" colspan="4" class="py-2 pr-3 pl-4 text-center text-sm font-semibold bg-green-100 text-gray-900 sm:pl-6">
+                                <span>Singolare</span>
+                                <span class="text-xs text-gray-500">(Singular)</span>
+                            </th>
+                            <th scope="col" colspan="4" class="py-2 pr-3 pl-4 text-center text-sm font-semibold bg-orange-100 text-gray-900 sm:pl-6">
+                                <span>Plurale</span>
+                                <span class="text-xs text-gray-500">(Plural)</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-green-100 text-gray-900 sm:pl-6"> </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-green-100 text-gray-900 sm:pl-6">
+                                <span>Io</span>
+                                <span class="text-xs text-gray-500">(Me)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-green-100 text-gray-900 sm:pl-6">
+                                <span>Tu</span>
+                                <span class="text-xs text-gray-500">(You)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-green-100 text-gray-900 sm:pl-6">
+                                <span>Lui/Lei</span>
+                                <span class="text-xs text-gray-500">(Him/Her)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-orange-100 text-gray-900 sm:pl-6">
+                                <span>Noi</span>
+                                <span class="text-xs text-gray-500">(We)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-orange-100 text-gray-900 sm:pl-6">
+                                <span>Voi</span>
+                                <span class="text-xs text-gray-500">(You)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-orange-100 text-gray-900 sm:pl-6">
+                                <span>Loro</span>
+                                <span class="text-xs text-gray-500">(Them)</span>
+                            </th>
+                            <th scope="col" class="py-2 pr-3 pl-4 text-left text-sm font-semibold bg-orange-100 text-gray-900 sm:pl-6"> </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr x-show="presente">
-                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Presente</th>
+                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                                <span class="block text-center">Presente</span>
+                                <span class="block text-center text-xs text-gray-500">(Present)</span>
+                            </th>
                             <td>
                                 <div class="p-2 grid grid-cols-1 min-w-36">
                                     <input x-ref="presente_io" type="text" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 sm:pr-9 sm:text-sm/6" :class="{ 'outline-green-300': presente_io === true, 'outline-red-300': presente_io === false }">
@@ -270,7 +301,10 @@
                         </tr>
 
                         <tr x-show="imperfetto">
-                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Imperfetto</th>
+                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                                <span class="block text-center">Imperfetto</span>
+                                <span class="block text-center text-xs text-gray-500">(On-Going)</span>
+                            </th>
                             <td>
                                 <div class="p-2 grid grid-cols-1 min-w-36">
                                     <input x-ref="imperfetto_io" type="text" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 sm:pr-9 sm:text-sm/6" :class="{ 'outline-green-300': imperfetto_io === true, 'outline-red-300': imperfetto_io === false }">
@@ -345,7 +379,10 @@
                         </tr>
 
                         <tr x-show="passato">
-                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Passato Prossimo</th>
+                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                                <span class="block text-center">Passato</span>
+                                <span class="block text-center text-xs text-gray-500">(Past)</span>
+                            </th>
                             <td>
                                 <div class="p-2 grid grid-cols-1 min-w-36">
                                     <input x-ref="passato_io" type="text" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 sm:pr-9 sm:text-sm/6" :class="{ 'outline-green-300': passato_io === true, 'outline-red-300': passato_io === false }">
@@ -420,7 +457,10 @@
                         </tr>
 
                         <tr x-show="futuro">
-                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Futuro Semplice</th>
+                            <th class="bg-gray-100 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                                <span class="block text-center">Futuro</span>
+                                <span class="block text-center text-xs text-gray-500">(Future)</span>
+                            </th>
                             <td>
                                 <div class="p-2 grid grid-cols-1 min-w-36">
                                     <input x-ref="futuro_io" type="text" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 sm:pr-9 sm:text-sm/6" :class="{ 'outline-green-300': futuro_io === true, 'outline-red-300': futuro_io === false }">
@@ -498,12 +538,22 @@
               </div>
             </div>
         </div>
+
         <div class="mx-4 my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-                <button x-on:click="random()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Next</button>
-                <button x-on:click="check()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Check</button>
-                <button x-on:click="reveal()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reveal</button>
-                <button x-on:click="clear()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Clear</button>
+                <div class="flex items-center space-x-2">
+                    <button x-on:click="random()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Next</button>
+                    <button x-on:click="check()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Check</button>
+                    <button x-on:click="reveal()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reveal</button>
+                    <button x-on:click="clear()" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Clear</button>
+                    <div class="relative ml-4">
+                        <span>Jump to: </span>
+                        <select x-ref="verbs" x-on:change="changeVerb()" class="appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></select>
+                        <svg class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 size-5 text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
 
