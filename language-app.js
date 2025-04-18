@@ -70,6 +70,7 @@ function app() {
 
         setup() {
             this.load();
+            this.specific("essere");
             this.checkUrl();
         },
 
@@ -87,7 +88,7 @@ function app() {
                 if (language.verb.toLowerCase() == verb){
                     this.selection = language;
                     this.$refs.verb.textContent = this.selection.verb;
-                    this.clear();
+                    this.reveal();
                 }
             }
         },
@@ -98,7 +99,6 @@ function app() {
             url.searchParams.set('verb', selected);
             window.history.pushState({}, '', url);
             this.checkUrl();
-            this.reveal();
             this.$refs.verbs.focus();
         },
 
@@ -111,7 +111,7 @@ function app() {
             this.clear();
         },
 
-        load(randomize = true) {
+        load() {
             this.language = [];
             this.language.push(...language[0].verbs);
             for (var i = 1; i < language.length; i++) {
@@ -129,9 +129,6 @@ function app() {
                 option.textContent = lang.verb;
                 this.$refs.verbs.appendChild(option);
             });
-
-
-            if (randomize) this.random();
         },
 
         check() {
