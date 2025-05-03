@@ -7,6 +7,8 @@ function app() {
         frequent: true,
         daily: true,
         reflexive: true,
+        singolare: true,
+        plurale: true,
         presente: true,
         imperfetto: true,
         passato: true,
@@ -82,7 +84,17 @@ function app() {
             }
         },
 
+        changeVerb() {
+            const selected = this.$refs.verbs.value;
+            const url = new URL(window.location.href);
+            url.searchParams.set('verb', selected);
+            window.history.pushState({}, '', url);
+            this.checkUrl();
+            this.$refs.verbs.focus();
+        },
+
         specific(verb) {
+            this.clear();
             for (var i = 0; i < this.language.length; i++) {
                 const language = this.language[i];
                 if (language.verb.toLowerCase() == verb){
@@ -93,22 +105,13 @@ function app() {
             }
         },
 
-        changeVerb() {
-            const selected = this.$refs.verbs.value;
-            const url = new URL(window.location.href);
-            url.searchParams.set('verb', selected);
-            window.history.pushState({}, '', url);
-            this.checkUrl();
-            this.$refs.verbs.focus();
-        },
-
         random() {
+            this.clear();
+
             const selection = this.language[Math.floor(Math.random() * this.language.length)];
             this.selection = selection;
 
             this.$refs.verb.textContent = this.selection.verb;
-            
-            this.clear();
         },
 
         load() {
